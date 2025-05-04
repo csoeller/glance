@@ -47,6 +47,7 @@ let fileExtensionLexers = [
 	"xcscheme": "xml",
 	"xib": "xml",
         "slurm": "sh",
+	"pvs": "yaml",
 
 	// Files for which a different, similar syntax is used
 	"liquid": "twig",
