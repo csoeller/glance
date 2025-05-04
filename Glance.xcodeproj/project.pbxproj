@@ -829,7 +829,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ./HTMLConverter/\n[ ! -d /opt/homebrew ] || eval \"$(/opt/homebrew/bin/brew shellenv)\"\nGOOS=darwin GOARCH=amd64 CGO_ENABLED=1 go build --buildmode=c-archive -ldflags \"-s -w\" -o ./htmlconverter-amd64.a\nGOOS=darwin GOARCH=arm64 CGO_ENABLED=1 go build --buildmode=c-archive -ldflags \"-s -w\" -o ./htmlconverter-arm64.a\nlipo -create -output htmlconverter.a htmlconverter-amd64.a htmlconverter-arm64.a\ncp htmlconverter-amd64.h htmlconverter.h\n";
+			shellScript = "cd ./HTMLConverter/\n[ ! -d /opt/homebrew ] || eval \"$(/opt/homebrew/bin/brew shellenv)\"\nGOOS=darwin GOARCH=amd64 CGO_ENABLED=1 /usr/local/go/bin/go build --buildmode=c-archive -ldflags \"-s -w\" -o ./htmlconverter-amd64.a\nGOOS=darwin GOARCH=arm64 CGO_ENABLED=1 /usr/local/go/bin/go build --buildmode=c-archive -ldflags \"-s -w\" -o ./htmlconverter-arm64.a\nlipo -create -output htmlconverter.a htmlconverter-amd64.a htmlconverter-arm64.a\ncp htmlconverter-amd64.h htmlconverter.h\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -971,6 +971,7 @@
 					"$(PROJECT_DIR)/HTMLConverter",
 				);
 				MARKETING_VERSION = 1.5.1;
+				PATH = /usr/local/bin;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chamburr.Glance.QLPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1002,6 +1003,7 @@
 					"$(PROJECT_DIR)/HTMLConverter",
 				);
 				MARKETING_VERSION = 1.5.1;
+				PATH = /usr/local/bin;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chamburr.Glance.QLPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1150,6 +1152,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.5.1;
+				PATH = /usr/local/bin;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chamburr.Glance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1176,6 +1179,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.5.1;
+				PATH = /usr/local/bin;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chamburr.Glance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
