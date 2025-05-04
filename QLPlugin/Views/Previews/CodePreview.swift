@@ -46,6 +46,7 @@ let fileExtensionLexers = [
 	"webmanifest": "json",
 	"xcscheme": "xml",
 	"xib": "xml",
+        "slurm": "sh",
 
 	// Files for which a different, similar syntax is used
 	"liquid": "twig",
